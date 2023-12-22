@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node ./functions/index.js",
+    "build": "netlify deploy --prod"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,9 @@
     "cron": "^3.1.6",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "nodemailer": "^6.9.7"
+    "netlify-cli": "^17.10.1",
+    "netlify-lambda": "^2.0.16",
+    "nodemailer": "^6.9.7",
+    "serverless-http": "^3.2.0"
   }
 }
