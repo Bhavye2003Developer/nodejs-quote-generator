@@ -6,6 +6,7 @@ const quotesPath = "../scemas/quotes.json"
 const mailsPath = "../scemas/mails.json"
 
 
+// hardcoded credentials
 const user = "cybergod.webprojects@gmail.com"
 const pass = "enkq eoxx volt jtmr"
 

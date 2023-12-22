@@ -15,17 +15,13 @@ const PORT = 3000
 utils.startCronJob(
     {
         seconds: 0,
-        minutes: 30,
-        hour: 13, //0-23
+        minutes: 25,
+        hour: 15, //0-23
         executor: function () {
             utils.sendMail()
         }
     }
 )
-
-router.get("/", (req, res) => {
-    res.redirect("/subscribe")
-})
 
 router.get(`/subscribe`, (req, res) => {
     res.render('index')
@@ -52,7 +48,12 @@ router.post("/subscribe", (req, res) => {
 })
 
 
-router.use("", router)
+router.get("/", (req, res) => {
+    res.redirect("/subscribe")
+})
+
+
+app.use("/", router)
 
 app.listen(PORT, () => {
     console.log(`Listening at port ${PORT}...`)
